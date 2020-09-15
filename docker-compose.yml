@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  identityservice:
+    container_name: identityservice
+    build:
+      context: .
+    ports:
+      - 8008:8008
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true
